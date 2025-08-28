@@ -9,7 +9,7 @@ async function getRequestWithNativeFetch(url, signal = null) {
 }
 
 export function useFetchAllItems() {
-    const [items, setItems] = useState(null);
+    const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 

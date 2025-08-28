@@ -1,0 +1,10 @@
+.shopItem {
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 0 1rem;
+    background-color: #515151;
+}

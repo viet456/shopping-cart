@@ -1,7 +1,7 @@
-import { StoreItem } from "../storeItem/StoreItem";
 import { Link } from "react-router-dom";
 import { useFetchAllItems } from "../useFetchAllItems";
 import styles from './Shop.module.css';
+import { ItemCard } from "../itemCard/ItemCard";
 
 export function Shop() {
     const { items, loading, error } = useFetchAllItems();
@@ -11,10 +11,10 @@ export function Shop() {
             {error && <h3>Error: {error}</h3>}
             {loading && <h3>Loading</h3>}
             {items.map(item => (
-                <div className={styles.shopItem}>
-                    <h3>{item.title}</h3>
-                    <p>${item.price}</p>
-                </div>
+                <ItemCard 
+                    key={item.id}
+                    itemTitle={item.title}
+                    itemPrice={item.price}/>
             ))}
         </section>
     )
