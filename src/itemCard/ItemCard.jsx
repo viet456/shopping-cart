@@ -1,10 +1,14 @@
+import { Link } from 'react-router-dom';
 import styles from './itemCard.module.css';
 
-export function ItemCard({ itemTitle, itemPrice }) {
+export function ItemCard({ item }) {
     return (
-        <div className={styles.shopItem}>
-            <h3>{itemTitle}</h3>
-            <p>${itemPrice}</p>
-        </div>
+        <Link to={`/items/${item.id}`}>
+            <div className={styles.shopItem}>
+                <h3>{item.title}</h3>
+                <p>${item.price}</p>
+            </div>
+        </Link>
+
     )
 }

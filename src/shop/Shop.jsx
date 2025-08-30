@@ -11,10 +11,9 @@ export function Shop() {
             {error && <h3>Error: {error}</h3>}
             {loading && <h3>Loading</h3>}
             {items.map(item => (
-                <ItemCard 
+                <ItemCard
                     key={item.id}
-                    itemTitle={item.title}
-                    itemPrice={item.price}/>
+                    item={item}/>
             ))}
         </section>
     )

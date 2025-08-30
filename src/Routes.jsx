@@ -2,6 +2,7 @@ import { App } from "./App";
 import { Cart } from "./cart/Cart"
 import { Shop } from "./shop/Shop";
 import { Layout } from "./Layout";
+import { ItemPage } from './itemPage/ItemPage'
 
 const routes = [
     {
@@ -13,7 +14,10 @@ const routes = [
                 path: '/cart',
                 element: <Cart />,
             },
-            
+            {
+                path: '/items/:itemId',
+                element: <ItemPage />
+            }
         ]
     },
 

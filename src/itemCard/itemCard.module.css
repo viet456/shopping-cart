@@ -3,7 +3,7 @@
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     color: white;
     padding: 0 1rem;
     background-color: #515151;
