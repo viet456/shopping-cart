@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { useFetchAllItems } from "../useFetchAllItems";
 import styles from './Shop.module.css';
 import { ItemCard } from "../itemCard/ItemCard";
+import { useItems } from "../ItemContext";
 
 export function Shop() {
-    const { items, loading, error } = useFetchAllItems();
+    const { items, loading, error } = useItems();
 
     return (
         <section className={styles.shopGrid}>
