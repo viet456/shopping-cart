@@ -5,11 +5,14 @@ import { Shop } from './shop/Shop'
 import { Navbar } from './Navbar'
 import { Layout } from './Layout'
 import { ItemProvider } from './ItemContext'
+import { CartProvider } from './cart/CartContext'
 
 export function App() {
   return (
     <ItemProvider>
-      <Layout />
+      <CartProvider>
+        <Layout />
+      </CartProvider>
     </ItemProvider>
   )
 }
